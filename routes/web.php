@@ -11,14 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('sbadmin2.master');
+// });
 
-Route::get('/items/create', 'ItemController@create'); // menampilkan halaman form
-Route::post('/items', 'ItemController@store'); // menyimpan data
-Route::get('/items', 'ItemController@index'); // menampilkan semua
-Route::get('/items/{id}', 'ItemController@show'); // menampilkan detail item dengan id 
-Route::get('/items/{id}/edit', 'ItemController@edit'); // menampilkan form untuk edit item
-Route::put('/items/{id}', 'ItemController@update'); // menyimpan perubahan dari form edit
-Route::delete('/items/{id}', 'ItemController@destroy'); // menghapus data dengan id
+// Route::get('/items/create', 'ItemController@create'); // menampilkan halaman form
+// Route::post('/items', 'ItemController@store'); // menyimpan data
+// Route::get('/items', 'ItemController@index'); // menampilkan semua
+// Route::get('/items/{id}', 'ItemController@show'); // menampilkan detail item dengan id 
+// Route::get('/items/{id}/edit', 'ItemController@edit'); // menampilkan form untuk edit item
+// Route::put('/items/{id}', 'ItemController@update'); // menyimpan perubahan dari form edit
+// Route::delete('/items/{id}', 'ItemController@destroy'); // menghapus data dengan id
+
+Route::get('/', function() {
+    return view('sbadmin2.layouts.erd'); //TUGAS MENAMPILKAN ERD
+});
+Route::get('/artikel', 'ArtikelController@index');
+Route::get('/artikel/create', 'ArtikelController@create');  //halaman form buat artikel
+Route::post('/artikel', 'ArtikelController@store');
+Route::get('/artikel/{id}', 'ArtikelController@show');
+Route::get('/artikel/{id}/edit','ArtikelController@edit'); 
+Route::put('/artikel/{id}', 'ArtikelController@update');
+Route::delete('artikel/{id}', 'ArtikelController@destroy');
+

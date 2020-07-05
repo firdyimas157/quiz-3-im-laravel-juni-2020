@@ -1,0 +1,21 @@
+
+    // public function show() {
+    //     $pertanyaans = pertanyaan::find_by_id($id);
+
+    //     return view('pertanyaan.show', compact($pertanyaans))
+    // }
+
+    // public function edit() {
+    //     $peredit = pertanyaan::find_by_id($id) {
+    //         return('pertanyaan.edit', compact('peredit'));
+    //     }
+
+    // public function update($id, Request $request) {
+    //     $perupdate = pertanyaan::update($id, $request->all());
+    //     return redirect('/pertanyaan');
+    // }
+    
+    // public function destroy($id) {
+    //     $deleted = pertanyaan::destroy($id);
+    //     return redirect('/pertanyaan');
+    // }
